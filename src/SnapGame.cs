@@ -19,6 +19,7 @@ namespace CardGames
 		/// <param name="myGame">The game object to update in response to events.</param>
 		private static void HandleUserInput(Snap myGame)
 		{
+			
 			//Fetch the next batch of UI interaction
 			SwinGame.ProcessEvents();
 
@@ -34,7 +35,7 @@ namespace CardGames
 		/// <param name="myGame">The details of the game -- mostly top card and scores.</param>
 		private static void DrawGame(Snap myGame)
 		{
-			SwinGame.ClearScreen(Color.White);
+			SwinGame.DrawBitmap("cardsBoard.png",0,0);
 
 			// Draw the top card
 			Card top = myGame.TopCard;
